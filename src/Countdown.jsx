@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Countdown = () => (
-  <p>Countdown Component</p>
+const Countdown = (props) => (
+  <p><strong>{props.name}</strong> {props.time}</p>
 );
 
 export default Countdown;
