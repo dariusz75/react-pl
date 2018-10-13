@@ -1,5 +1,12 @@
 import React from 'react';
 
-const App = () => (<h1>Hello World!</h1>);
+import Countdown from './Countdown';
+
+const App = () => (
+  <div>
+    <Countdown />
+    <Countdown />
+  </div>
+);
 
 export default App;
