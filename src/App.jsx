@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Countdown from './Countdown';
+import EditEvent from './EditEvent';
 
 class App extends Component {
   constructor() {
@@ -27,6 +28,7 @@ class App extends Component {
     return (
       <div className="app" >
         {events}
+        <EditEvent />
       </div>
     );
   }
