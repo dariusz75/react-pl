@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import './App.css';
 import Countdown from './Countdown';
 
 class App extends Component {
@@ -24,7 +25,7 @@ class App extends Component {
     })
 
     return (
-      <div>
+      <div className="app" >
         {events}
       </div>
     );
