@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import './Countdown.css';
 
 const Countdown = (props) => (
-  <p class="countdown"><strong>{props.name}</strong> {props.time}</p>
+  <p className="countdown"><strong>{props.name}</strong> {props.time}</p>
 );
 
 Countdown.propTypes = {

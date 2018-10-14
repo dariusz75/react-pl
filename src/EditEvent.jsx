@@ -1,22 +1,26 @@
 import React from 'react';
 
+import './EditEvent.css';
+
 const EditEvent = () => {
 
   return <div className="edit-event">
     <div className="edit-event__input-group">
-      <label htmlFor="name">Name</label>
-      <input id="name" type="text" name="name" />
+      <label className="edit-event__input-group__label" htmlFor="name">Name</label>
+      <input id="name" className="edit-event__input-group__input" type="text" name="name" />
     </div>
     <div className="edit-event__input-group">
-      <label htmlFor="hour">Hour</label>
-      <input id="hour" type="tel" name="hour" />
+      <label className="edit-event__input-group__label" htmlFor="hour">Hour</label>
+      <input id="hour" className="edit-event__input-group__input" type="tel" name="hour" />
     </div>
     <div className="edit-event__input-group">
-      <label htmlFor="minutes">Minutes</label>
-      <input id="minutes" type="tel" name="minutes" />
+      <label className="edit-event__input-group__label" htmlFor="minutes">Minutes</label>
+      <input id="minutes" className="edit-event__input-group__input" type="tel" name="minutes" />
     </div>
-    <button>OK</button>
-    <button>Cancel</button>
+    <div className="edit-event__input-group">
+      <button className="edit-event__input-group__button">OK</button>
+      <button className="edit-event__input-group__button">Cancel</button>
+    </div>
   </div>;
 };
 

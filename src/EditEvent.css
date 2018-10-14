@@ -1,0 +1,29 @@
+.edit-event {
+  padding: 10px;
+  background-color: #f58f3c;
+}
+
+.edit-event__input-group {
+  margin-top: 10px;
+}
+
+.edit-event__input-group__label {
+ 
+}
+
+.edit-event__input-group__input {
+  width: 80%;
+  height: 20px;
+  float: right;
+  border: none;
+}
+
+.edit-event__input-group__button {
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
