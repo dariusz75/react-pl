@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <div className="app" >
         {events}
-        <EditEvent />
+        <EditEvent onCancel={() => alert('Test B')} />
       </div>
     );
   }

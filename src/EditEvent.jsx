@@ -2,7 +2,7 @@ import React from 'react';
 
 import './EditEvent.css';
 
-const EditEvent = () => {
+const EditEvent = (props) => {
 
   return <div className="edit-event">
     <div className="edit-event__input-group">
@@ -18,8 +18,8 @@ const EditEvent = () => {
       <input id="minutes" className="edit-event__input-group__input" type="tel" name="minutes" />
     </div>
     <div className="edit-event__input-group">
-      <button className="edit-event__input-group__button">OK</button>
-      <button className="edit-event__input-group__button">Cancel</button>
+      <button className="edit-event__input-group__button" onClick={() => alert('Test A')} >OK</button>
+      <button className="edit-event__input-group__button" onClick={() => props.onCancel()}>Cancel</button>
     </div>
   </div>;
 };
