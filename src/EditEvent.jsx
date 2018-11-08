@@ -12,7 +12,7 @@ const EditEvent = (props) => {
         className="edit-event__input-group__input"
         type="text"
         name="name"
-        onChange={(e) => console.log(e.target.value)}
+        onChange={(e) => console.log(e.target.name, e.target.value)}
       />
     </div>
     <div className="edit-event__input-group">
@@ -22,7 +22,7 @@ const EditEvent = (props) => {
         className="edit-event__input-group__input"
         type="tel"
         name="hour"
-        onChange={(e) => console.log(e.target.value)}
+        onChange={(e) => console.log(e.target.name, e.target.value)}
       />
     </div>
     <div className="edit-event__input-group">
@@ -32,7 +32,7 @@ const EditEvent = (props) => {
         className="edit-event__input-group__input"
         type="tel"
         name="minutes"
-        onChange={(e) => console.log(e.target.value)}
+        onChange={(e) => console.log(e.target.name, e.target.value)}
       />
     </div>
     <div className="edit-event__input-group">
