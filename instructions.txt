@@ -1,0 +1,8 @@
+Zadaniem tego rozdzialu, jest przekazanie wartosci z formularza, do stanu komponentu.
+W tym celu utworzymy sobie funkcje handleEditEvent w pliku App.js, w klasie komponentu App.
+
+ handleEditEvent(val) {
+
+  }
+
+  Funkcja przyjmuje argument val.

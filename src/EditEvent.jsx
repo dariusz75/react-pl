@@ -12,7 +12,7 @@ const EditEvent = (props) => {
         className="edit-event__input-group__input"
         type="text"
         name="name"
-        onChange={(e) => console.log(e.target.name, e.target.value)}
+        onChange={(e) => props.onInputChange({ [e.target.name]: e.target.value })}
       />
     </div>
     <div className="edit-event__input-group">
@@ -22,7 +22,7 @@ const EditEvent = (props) => {
         className="edit-event__input-group__input"
         type="tel"
         name="hour"
-        onChange={(e) => console.log(e.target.name, e.target.value)}
+        onChange={(e) => props.onInputChange({ [e.target.name]: e.target.value })}
       />
     </div>
     <div className="edit-event__input-group">
@@ -32,12 +32,18 @@ const EditEvent = (props) => {
         className="edit-event__input-group__input"
         type="tel"
         name="minutes"
-        onChange={(e) => console.log(e.target.name, e.target.value)}
+        onChange={(e) => props.onInputChange({ [e.target.name]: e.target.value })}
       />
     </div>
     <div className="edit-event__input-group">
-      <button className="edit-event__input-group__button" onClick={() => alert('Test A')} >OK</button>
-      <button className="edit-event__input-group__button" onClick={() => props.onCancel()}>Cancel</button>
+      <button className="edit-event__input-group__button">
+        OK
+      </button>
+      <button
+        className="edit-event__input-group__button"
+        onClick={() => props.onCancel()}>
+        Cancel
+      </button>
     </div>
   </div>;
 };

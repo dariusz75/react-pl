@@ -7,6 +7,7 @@ import EditEvent from './EditEvent';
 class App extends Component {
   constructor() {
     super();
+    this.handleEditEvent = this.handleEditEvent.bind(this);
 
     this.state = {
       events: [
@@ -17,7 +18,9 @@ class App extends Component {
     }
   }
 
-
+  handleEditEvent(val) {
+    console.log(val);
+  }
 
   render() {
 
@@ -28,7 +31,10 @@ class App extends Component {
     return (
       <div className="app" >
         {events}
-        <EditEvent onCancel={() => alert('Test B')} />
+        <EditEvent
+          onCancel={() => alert('Test B')}
+          onInputChange={(val) => this.handleEditEvent(val)}
+        />
       </div>
     );
   }
