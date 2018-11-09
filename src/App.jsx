@@ -14,12 +14,23 @@ class App extends Component {
         { id: 0, name: 'Breakfast', time: '7.00' },
         { id: 1, name: 'Lunch', time: '13.00' },
         { id: 2, name: 'Afternoon Tea', time: '17.00' }
-      ]
+      ],
+      editedEvent: {
+        id: 3,
+        name: '',
+        hour: '',
+        minutes: ''
+      }
     }
   }
 
   handleEditEvent(val) {
-    console.log(val);
+    this.setState(prevState => {
+      return {
+        editedEvent: Object.assign(prevState.editedEvent, val)
+      }
+    });
+    console.log(this.state.editedEvents);
   }
 
   render() {
