@@ -10,6 +10,7 @@ class App extends Component {
     super();
     this.handleEditEvent = this.handleEditEvent.bind(this);
     this.handleSaveEvent = this.handleSaveEvent.bind(this);
+    this.handleRemoveEvent = this.handleRemoveEvent.bind(this);
 
     this.state = {
       events: [
@@ -48,10 +49,23 @@ class App extends Component {
     })
   }
 
+  handleRemoveEvent(id) {
+    this.setState(prevState => ({
+      events: prevState.events.filter(el => el.id !== id)
+    }))
+  }
+
   render() {
 
     let events = this.state.events.map(el => {
-      return <Countdown key={el.id} name={el.name} hour={el.hour} minutes={el.minutes} />;
+      return <Countdown 
+                key={el.id} 
+                id={el.id}
+                name={el.name} 
+                hour={el.hour} 
+                minutes={el.minutes} 
+                onRemove={id => this.handleRemoveEvent(id)}
+              />;
     })
 
     return (
