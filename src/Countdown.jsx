@@ -3,8 +3,12 @@ import propTypes from 'prop-types';
 
 import './Countdown.css';
 
+
+
 const Countdown = (props) => (
-  <p className="countdown"><strong>{props.name}</strong> {props.hour}:{props.minutes}</p>
+  <div>
+  <p className="countdown"><strong>{props.name}</strong> {props.hour}:{props.minutes}<i className="fas fa-trash-alt delete-item-icon"></i></p> 
+  </div>
 );
 
 Countdown.propTypes = {

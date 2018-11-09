@@ -1,7 +1,14 @@
 .countdown {
-  padding-left: 20px;
-  padding-top: 20px;
+  padding: 20px 20px 0 20px;
   background: linear-gradient(#368af4, #3181f2);
   color: #fff;
   font-size: 1.8rem;
+}
+
+.delete-item-icon {
+  float: right;
+}
+
+.delete-item-icon:hover {
+  cursor: pointer;
 }
