@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uniqid from 'uniqid';
 
 import './App.css';
 import Countdown from './Countdown';
@@ -17,7 +18,7 @@ class App extends Component {
         { id: 2, name: 'Afternoon Tea', hour: '17', minutes: '00' }
       ],
       editedEvent: {
-        id: 3,
+        id: uniqid(),
         name: '',
         hour: '',
         minutes: ''
@@ -38,7 +39,7 @@ class App extends Component {
       return {
         events: [...prevState.events, prevState.editedEvent],
         editedEvent: {
-          id: 3,
+          id: uniqid(),
           name: '',
           hour: '',
           minutes: ''
