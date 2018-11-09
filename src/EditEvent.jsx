@@ -36,7 +36,9 @@ const EditEvent = (props) => {
       />
     </div>
     <div className="edit-event__input-group">
-      <button className="edit-event__input-group__button">
+      <button 
+        className="edit-event__input-group__button"
+        onClick={() => props.onSave()}>
         OK
       </button>
       <button

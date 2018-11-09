@@ -8,6 +8,7 @@ class App extends Component {
   constructor() {
     super();
     this.handleEditEvent = this.handleEditEvent.bind(this);
+    this.handleSaveEvent = this.handleSaveEvent.bind(this);
 
     this.state = {
       events: [
@@ -30,7 +31,12 @@ class App extends Component {
         editedEvent: Object.assign(prevState.editedEvent, val)
       }
     });
-    console.log(this.state.editedEvents);
+  }
+
+  handleSaveEvent() {
+    this.setState(prevState => {
+      return {events: [...prevState.events, prevState.editedEvent]}
+    })
   }
 
   render() {
@@ -43,7 +49,8 @@ class App extends Component {
       <div className="app" >
         {events}
         <EditEvent
-          onCancel={() => alert('Test B')}
+          onSave={() => this.handleSaveEvent()}
+          onCancel={() => alert('Cancel clicked')}
           onInputChange={(val) => this.handleEditEvent(val)}
         />
       </div>
