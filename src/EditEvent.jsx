@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './EditEvent.css';
+import { isValidNumberInput } from './utilitiesAndFunctions';
 
 const EditEvent = (props) => {
 
@@ -24,6 +25,7 @@ const EditEvent = (props) => {
         type="tel"
         name="hour"
         value={props.hour}
+        onKeyPress={(e) => isValidNumberInput(e)}
         onChange={(e) => props.onInputChange({ [e.target.name]: e.target.value })}
       />
     </div>
@@ -39,7 +41,7 @@ const EditEvent = (props) => {
       />
     </div>
     <div className="edit-event__input-group">
-      <button 
+      <button
         className="edit-event__input-group__button"
         onClick={() => props.onSave()}>
         OK
