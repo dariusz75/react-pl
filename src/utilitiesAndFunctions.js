@@ -1,3 +1,5 @@
-export function isValidNumberInput() {
-  return true;
+export function isValidNumberInput(e) {
+  if (isNaN(parseInt(e.key, 10)) === true) {
+    return e.preventDefault();
+  }
 }
