@@ -5,10 +5,11 @@
   font-size: 1.8rem;
 }
 
-.delete-item-icon {
+.item-icon {
+  margin-left: 10px;
   float: right;
 }
 
-.delete-item-icon:hover {
+.item-icon:hover {
   cursor: pointer;
 }
