@@ -38,6 +38,23 @@ class App extends Component {
 
   handleSaveEvent() {
     this.setState(prevState => {
+      const editedEventExists = prevState.events.find(
+        el => el.id === prevState.editedEvent.id
+      );
+
+      let updatedEvents;
+      if (editedEventExists) {
+        updatedEvents = prevState.events.map(el => {
+          if (el.id === prevState.editedEvent.id) {
+            return prevState.editedEvent;
+          } else {
+            return el;
+          }
+        })
+      }
+    })
+    /* 
+    this.setState(prevState => {
       return {
         events: [...prevState.events, prevState.editedEvent],
         editedEvent: {
@@ -48,6 +65,7 @@ class App extends Component {
         }
       }
     })
+    */
   }
 
   handleRemoveEvent(id) {
