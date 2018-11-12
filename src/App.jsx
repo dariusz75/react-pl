@@ -12,6 +12,7 @@ class App extends Component {
     this.handleSaveEvent = this.handleSaveEvent.bind(this);
     this.handleRemoveEvent = this.handleRemoveEvent.bind(this);
     this.handleEditInit = this.handleEditInit.bind(this);
+    this.handleCancelEvent = this.handleCancelEvent.bind(this);
 
     this.state = {
       events: [
@@ -92,6 +93,11 @@ class App extends Component {
     }))
   }
 
+  handleCancelEvent() {
+    this.setState({
+      editedEvent: { id: uniqid(), name: '', hour: '', minutes: '' }
+    })
+  }
 
   render() {
 
@@ -115,7 +121,7 @@ class App extends Component {
           hour={this.state.editedEvent.hour}
           minutes={this.state.editedEvent.minutes}
           onSave={() => this.handleSaveEvent()}
-          onCancel={() => alert('Cancel clicked')}
+          onCancel={() => this.handleCancelEvent()}
           onInputChange={(val) => this.handleEditEvent(val)}
         />
       </div>
