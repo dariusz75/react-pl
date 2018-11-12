@@ -51,6 +51,18 @@ class App extends Component {
             return el;
           }
         })
+      } else {
+        updatedEvents = [...prevState.events, prevState.editedEvent]
+      }
+
+      return {
+        events: updatedEvents,
+        editedEvent: {
+          id: uniqid(),
+          name: '',
+          hour: '',
+          minutes: ''
+        }
       }
     })
     /* 
