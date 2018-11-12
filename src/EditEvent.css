@@ -7,10 +7,6 @@
   margin-top: 10px;
 }
 
-.edit-event__input-group__label {
- 
-}
-
 .edit-event__input-group__input {
   width: 80%;
   height: 20px;
@@ -26,4 +22,9 @@
   background: none;
   color: #fff;
   cursor: pointer;
+}
+
+.edit-event__input-group__button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }

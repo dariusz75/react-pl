@@ -1,9 +1,11 @@
 import React from 'react';
 
 import './EditEvent.css';
-import { isValidNumberInput } from './utilitiesAndFunctions';
+import { isValidNumberInput, isValidName, isValidHour, isValidMinutes } from './utilitiesAndFunctions';
 
 const EditEvent = (props) => {
+
+  const isFormValid = isValidName(props.name) && isValidHour(props.hour) && isValidMinutes(props.minutes);
 
   return <div className="edit-event">
     <div className="edit-event__input-group">
@@ -42,6 +44,7 @@ const EditEvent = (props) => {
     </div>
     <div className="edit-event__input-group">
       <button
+        disabled={!isFormValid}
         className="edit-event__input-group__button"
         onClick={() => props.onSave()}>
         OK
