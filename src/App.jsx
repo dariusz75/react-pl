@@ -66,19 +66,7 @@ class App extends Component {
         }
       }
     })
-    /* 
-    this.setState(prevState => {
-      return {
-        events: [...prevState.events, prevState.editedEvent],
-        editedEvent: {
-          id: uniqid(),
-          name: '',
-          hour: '',
-          minutes: ''
-        }
-      }
-    })
-    */
+
   }
 
   handleRemoveEvent(id) {
