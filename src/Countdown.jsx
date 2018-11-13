@@ -6,12 +6,12 @@ import './Countdown.css';
 
 
 const Countdown = (props) => (
-  <div>
-    <p className="countdown"><strong>{props.name}</strong> {props.hour}:{props.minutes}
+  <ul className="list-group list-group-flush">
+    <li className="list-group-item countdown"><strong>{props.name}</strong> {props.hour}:{props.minutes}
       <i className="far fa-edit item-icon" onClick={() => props.onEditInit(props.id)}></i>
       <i className="fas fa-trash-alt item-icon" onClick={() => props.onRemove(props.id)}></i>
-    </p>
-  </div>
+    </li>
+  </ul>
 );
 
 Countdown.propTypes = {

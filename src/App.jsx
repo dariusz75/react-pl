@@ -102,16 +102,20 @@ class App extends Component {
     })
 
     return (
-      <div className="app" >
-        {events}
-        <EditEvent
-          name={this.state.editedEvent.name}
-          hour={this.state.editedEvent.hour}
-          minutes={this.state.editedEvent.minutes}
-          onSave={() => this.handleSaveEvent()}
-          onCancel={() => this.handleCancelEvent()}
-          onInputChange={(val) => this.handleEditEvent(val)}
-        />
+      <div className="container-fluid" >
+        <div className="row">
+          <div className="offset-md-3 col-md-6">
+            {events}
+            <EditEvent
+              name={this.state.editedEvent.name}
+              hour={this.state.editedEvent.hour}
+              minutes={this.state.editedEvent.minutes}
+              onSave={() => this.handleSaveEvent()}
+              onCancel={() => this.handleCancelEvent()}
+              onInputChange={(val) => this.handleEditEvent(val)}
+            />
+          </div>
+        </div>
       </div>
     );
   }
